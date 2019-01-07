@@ -1,8 +1,21 @@
 doctype html
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+    head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/style.css')
+    body
+        include ./block1
+
+        block content
+
+        block foot
+            .foot--wrap
+                li
+                    a(href='/') 首页
+                li
+                    a(href='/hello') hello
+                li
+                    a(href='/test2') test2
+                li
+                    a(href='/test21111') test21111
 
