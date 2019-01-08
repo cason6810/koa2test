@@ -36,14 +36,13 @@ const test2 = async (ctx, next) => {
     await loopModel();
 
     // await getUrl().then(()=>{});
-    await next();
 
-    // ctx.body = arr2;
+    ctx.body = arr2;
 
-    await ctx.render('hello', {
-        title: 'search',
-        bodya: arr2
-    })
+    // await ctx.render('hello', {
+    //     title: 'search',
+    //     bodya: arr2
+    // })
 };
 
 function loopModel() {
