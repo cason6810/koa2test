@@ -93,7 +93,7 @@ function getProjectList(urlFlag, assignId) {
                     headers: headers,
                 };
                 resolve(_obj);
-                // getTask(urlFlag, assignId, _tempProjectList, headers);
+                getTask(urlFlag, assignId, _tempProjectList, headers);
             });
     });
 
