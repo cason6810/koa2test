@@ -79,6 +79,7 @@ function getProjectList(urlFlag, assignId) {
         let _tempProjectList = [];
         superagent.get(_url)
             .set(headers)
+            .retry(2)
             .end((err, res) => {
                 for (let val of res.body) {
                     if (val.id !== 100) {
@@ -106,6 +107,7 @@ function getTask(_urlFlag, _assignId, _tempProjectList, _headers) {
 
         superagent.get(_url)
             .set(_headers)
+            .retry(2)
             .end((err, res) => {
                 if (err) {
                     // console.log(err);
@@ -130,6 +132,7 @@ function getTask(_urlFlag, _assignId, _tempProjectList, _headers) {
 function getUrl() {
     return new Promise((resolve) => {
         superagent.get(url)
+            .retry(2)
             .end((err, res) => {
                 if (err) {
                     console.log(err);
